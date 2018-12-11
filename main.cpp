@@ -1,5 +1,5 @@
-// Lab9.cpp : Defines the entry point for the console application.
-//
+// Tim Bourque
+// Lab 09
 
 #include "stdafx.h"
 #include <fstream>
@@ -40,11 +40,8 @@ map<string, int> FileRead(map<string, int> stringMap) {//map<key,value>
 }
 
 void FileWrite(map<string, int> stringMap) {
-	string fileName;
-	cout << "Enter name of file to write from" << endl;
-	cin >> fileName;
 	ofstream outFile;
-	outFile.open(fileName);
+	outFile.open("output.txt");
 	if (outFile.is_open()) {
 		for (map<string, int>::iterator it = stringMap.begin(); it != stringMap.end(); ++it) {
 			while (it->second != 0) {
